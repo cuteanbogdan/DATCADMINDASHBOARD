@@ -34,6 +34,7 @@ const Dashboard = () => {
 
   useEffect(() => {
     fetchUsers();
+  // eslint-disable-next-line
   }, [token]);
 
   return (
