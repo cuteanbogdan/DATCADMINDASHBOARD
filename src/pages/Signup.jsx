@@ -8,6 +8,8 @@ import { Toast } from "../utils/toastUtil";
 
 const Signup = () => {
   const [email, setEmail] = useState("");
+  const [nume, setNume] = useState("");
+  const [prenume, setPrenume] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
 
@@ -47,6 +49,8 @@ const Signup = () => {
           },
           body: JSON.stringify({
             email,
+            nume,
+            prenume,
             password,
           }),
         }
@@ -91,6 +95,36 @@ const Signup = () => {
                 placeholder="Email address"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
+              />
+            </div>
+            <div>
+              <label htmlFor="nume" className="sr-only">
+                Nume
+              </label>
+              <input
+                id="nume"
+                name="nume"
+                type="text"
+                required
+                className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+                placeholder="Nume"
+                value={nume}
+                onChange={(e) => setNume(e.target.value)}
+              />
+            </div>
+            <div>
+              <label htmlFor="prenume" className="sr-only">
+                Prenume
+              </label>
+              <input
+                id="prenume"
+                name="prenume"
+                type="text"
+                required
+                className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+                placeholder="Prenume"
+                value={prenume}
+                onChange={(e) => setPrenume(e.target.value)}
               />
             </div>
             <div>

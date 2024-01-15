@@ -1,6 +1,5 @@
 import React from "react";
 import { toast } from "react-toastify";
-import { Toast } from "../../utils/toastUtil";
 import toastifyOptions from "../../utils/toastifyOptions";
 
 const UserTable = ({ users, fetchUsers }) => {
@@ -33,7 +32,6 @@ const UserTable = ({ users, fetchUsers }) => {
   return (
     <div className="container mx-auto px-4 sm:px-8">
       <div className="py-8">
-        <Toast />
         <div className="shadow-md rounded-lg">
           <table className="min-w-full leading-normal">
             <thead>
